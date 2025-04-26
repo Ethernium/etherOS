@@ -4,11 +4,15 @@ name: etherOS
 description: This is my personal OS image.
 
 base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
-image-version: latest
+image-version: 42
 
 modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/ethernium/aorus-laptop/repo/fedora-%OS_VERSION%/ethernium-aorus-laptop-fedora-%OS_VERSION%.repo
-
-  - type: signing
+#  - type: akmods
+#    base: bazzite
+#    install:
+#      - aorus-laptop
+#
+#  - type: signing
