@@ -1,0 +1,12 @@
+name: etheros-server
+description: My server OS image, derived from uCore (Fedora CoreOS with batteries included)
+base-image: ghcr.io/ublue-os/ucore
+image-version: latest
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+  - type: script
+    scripts:
+      - 01-system-fixups.sh
